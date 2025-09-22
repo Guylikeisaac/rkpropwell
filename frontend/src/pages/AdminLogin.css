@@ -1,0 +1,234 @@
+/* Admin Login Page Styles */
+.admin-login-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    var(--black) 0%,
+    var(--gray-800) 50%,
+    var(--primary-red) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.admin-login-container {
+  max-width: 500px;
+  width: 100%;
+}
+
+.admin-login-card {
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+  padding: 3rem;
+  text-align: center;
+}
+
+.admin-login-header {
+  margin-bottom: 2rem;
+}
+
+.admin-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: var(--primary-red);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: 2rem;
+  margin: 0 auto 1.5rem;
+}
+
+.admin-login-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+}
+
+.admin-login-subtitle {
+  color: var(--gray-600);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.admin-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.form-icon {
+  color: var(--primary-red);
+  font-size: 0.875rem;
+}
+
+.form-input {
+  padding: 0.75rem;
+  border: 2px solid var(--gray-300);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-red);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-input::placeholder {
+  color: var(--gray-400);
+}
+
+/* Password Input */
+.password-input-container {
+  position: relative;
+}
+
+.password-input {
+  padding-right: 3rem;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--gray-400);
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: color 0.2s ease-in-out;
+}
+
+.password-toggle:hover {
+  color: var(--primary-red);
+}
+
+/* Admin Login Button */
+.admin-login-btn {
+  width: 100%;
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+/* Admin Credentials */
+.admin-credentials {
+  background-color: var(--gray-50);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  border: 2px solid var(--light-red);
+}
+
+.admin-credentials-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 0.75rem;
+}
+
+.admin-credentials-info {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--gray-600);
+  text-align: left;
+}
+
+.admin-credentials-info p {
+  margin: 0.25rem 0;
+  font-family: monospace;
+}
+
+/* Admin Features */
+.admin-features {
+  text-align: left;
+  background-color: var(--light-red);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border-left: 4px solid var(--primary-red);
+}
+
+.admin-features-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+.admin-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-features-list li {
+  padding: 0.25rem 0;
+  color: var(--gray-700);
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-login-page {
+    padding: 1rem;
+  }
+  
+  .admin-login-card {
+    padding: 2rem;
+  }
+  
+  .admin-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+  
+  .admin-login-title {
+    font-size: 1.75rem;
+  }
+  
+  .admin-credentials,
+  .admin-features {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-login-card {
+    padding: 1.5rem;
+  }
+  
+  .admin-login-title {
+    font-size: 1.5rem;
+  }
+  
+  .admin-credentials-info {
+    font-size: 0.625rem;
+  }
+}

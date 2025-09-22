@@ -1,0 +1,337 @@
+/* Property Card Styles */
+.property-card {
+  background-color: var(--white);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.property-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.property-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Image Section */
+.property-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.property-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.property-card:hover .property-image {
+  transform: scale(1.05);
+}
+
+/* Image Navigation Dots */
+.image-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.image-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.image-dot.active {
+  background-color: var(--white);
+  transform: scale(1.2);
+}
+
+.image-dot:hover {
+  background-color: var(--white);
+}
+
+/* Property Type Badge */
+.property-type-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.property-type-badge.buy {
+  background-color: var(--primary-red);
+  color: var(--white);
+}
+
+.property-type-badge.rent {
+  background-color: #10B981;
+  color: var(--white);
+}
+
+.property-type-badge.sell {
+  background-color: #F59E0B;
+  color: var(--white);
+}
+
+/* Action Buttons */
+.property-actions {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.action-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--gray-600);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+  backdrop-filter: blur(4px);
+}
+
+.action-btn:hover {
+  background-color: var(--white);
+  color: var(--primary-red);
+  transform: scale(1.1);
+}
+
+.like-btn.liked {
+  color: var(--primary-red);
+  background-color: var(--light-red);
+}
+
+/* Price Overlay */
+.price-overlay {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: var(--white);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  z-index: 2;
+}
+
+.property-price {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+/* Content Section */
+.property-content {
+  padding: 1.5rem;
+}
+
+.property-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.property-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray-600);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.location-icon {
+  color: var(--primary-red);
+  font-size: 0.875rem;
+}
+
+/* Property Details */
+.property-details {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: var(--gray-600);
+  font-size: 0.875rem;
+}
+
+.detail-icon {
+  color: var(--primary-red);
+  font-size: 0.875rem;
+}
+
+/* Property Description */
+.property-description {
+  color: var(--gray-700);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* Property Features */
+.property-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-tag {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--gray-100);
+  color: var(--gray-700);
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+.feature-tag.more {
+  background-color: var(--light-red);
+  color: var(--primary-red);
+}
+
+/* Property Footer */
+.property-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray-200);
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-red);
+  color: var(--white);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-btn:hover {
+  background-color: var(--dark-red);
+  transform: translateY(-1px);
+}
+
+.contact-icon {
+  font-size: 0.75rem;
+}
+
+.posted-date {
+  color: var(--gray-500);
+  font-size: 0.75rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .property-image-container {
+    height: 200px;
+  }
+  
+  .property-content {
+    padding: 1rem;
+  }
+  
+  .property-title {
+    font-size: 1.125rem;
+  }
+  
+  .property-details {
+    gap: 0.75rem;
+  }
+  
+  .property-footer {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+  
+  .contact-btn {
+    justify-content: center;
+  }
+  
+  .posted-date {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .property-image-container {
+    height: 180px;
+  }
+  
+  .property-actions {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+  
+  .action-btn {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .property-type-badge {
+    top: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.625rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .price-overlay {
+    bottom: 0.75rem;
+    right: 0.75rem;
+    padding: 0.375rem 0.5rem;
+  }
+  
+  .property-price {
+    font-size: 1rem;
+  }
+}
